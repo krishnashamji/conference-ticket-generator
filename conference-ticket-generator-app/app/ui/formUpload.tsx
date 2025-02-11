@@ -1,9 +1,10 @@
 interface FormUploadProps {
     label: string;
     id: string;
+    // onChange: (event: React.ChangeEvent<HTMLInputElement>) => void; 
 }
 
-export default function FormUpload({ label, id }: FormUploadProps) {
+export default function FormUpload({ label, id, }: FormUploadProps) {
     return (
         <div className="flex flex-col gap-2 items-start w-full">
             <label className="text-lg text-[#EAE6FD]">{label}</label>
@@ -17,6 +18,7 @@ export default function FormUpload({ label, id }: FormUploadProps) {
                 id={id}
                 type="file"
                 className="hidden"
+                // onChange={onChange}
             />
         </div>
     )
