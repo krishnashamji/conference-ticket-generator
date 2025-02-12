@@ -1,3 +1,4 @@
+'use client'
 import CtgLogo from '@/app/ui/ctgLogo'
 import CtgForm from './ui/ctgForm';
 

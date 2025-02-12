@@ -4,21 +4,28 @@ import PrimaryButton from "./primaryButton";
 import { useState } from "react";
 
 export default function CtgForm() {
-    // const [selectedFile, setSelectedFile] = useState()
     const [fullName, setFullName] = useState("")
     const [email, setEmail] = useState("")
     const [githubUsername, setGithubUsername] = useState("")
-
-    // const handleSelectedFile = (event: React.ChangeEvent<HTMLInputElement>) => {
-    //     setSelectedFile(event.target.files[0])
-    // }
+    
+    const [error, setError] = useState("")
 
     const handleFullName = (event: React.ChangeEvent<HTMLInputElement>) => {
         setFullName(event.target.value)
     }
 
     const handleEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setEmail(event.target.value)
+        const newEmail = event.target.value
+        setEmail(newEmail)
+
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        const emailValidity = emailPattern.test(newEmail); 
+
+        if (newEmail === "" || emailValidity) {
+            setError("")
+        } else {
+            setError("Please enter a valid email address")
+        }
     }
 
     const handleGithubUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -34,7 +41,7 @@ export default function CtgForm() {
             <FormField label="Full Name" id="fullName" type="text" value={fullName} onChange={handleFullName} />
 
             {/* Email */}
-            <FormField label="Email Address" id="emailAddress" type="text" value={email} onChange={handleEmail} />
+            <FormField label="Email Address" id="emailAddress" type="text" value={email} onChange={handleEmail} error={error}/>
 
             {/* Github Username */}
             <FormField label="Github Username" id="githubUsername" type="text" value={githubUsername} onChange={handleGithubUsername} />
@@ -43,3 +50,5 @@ export default function CtgForm() {
         </form>
     )
 }
+
+
