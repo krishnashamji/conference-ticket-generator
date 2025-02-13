@@ -1,5 +1,5 @@
 <svg width="447" height="208" viewBox="0 0 447 208" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_1_464)">
+    <g clipPath="url(#clip0_1_464)">
         <mask id="mask0_1_464" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
             width="447" height="208">
             <path d="M0.953369 0H446.953V208H0.953369V0Z" fill="white" />
@@ -13,9 +13,9 @@
     <defs>
         <linearGradient id="paint0_linear_1_464" x1="161.341" y1="-3.40612" x2="1315.85"
             y2="661.838" gradientUnits="userSpaceOnUse">
-            <stop stop-color="white" stop-opacity="0" />
-            <stop offset="0.48" stop-color="#F37362" />
-            <stop offset="0.905" stop-color="white" stop-opacity="0" />
+            <stop stopColor="white" stopOpacity="0" />
+            <stop offset="0.48" stopColor="#F37362" />
+            <stop offset="0.905" stopColor="white" stopOpacity="0" />
         </linearGradient>
         <clipPath id="clip0_1_464">
             <rect width="446" height="208" fill="white" transform="translate(0.953369)" />
