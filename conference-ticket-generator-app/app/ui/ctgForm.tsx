@@ -1,7 +1,9 @@
-import FormField from "@/app/ui/formField";
-import FormUpload from "./formUpload";
-import PrimaryButton from "./primaryButton";
+import FormField from "@/app/ui/FormField.tsx";
+import FormUpload from "./FormUpload.tsx";
+import PrimaryButton from "./PrimaryButton.jsx";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useFormStore } from "../hooks/formStore";
 
 export default function CtgForm() {
     const [file, setFile] = useState<File | null>(null);
@@ -10,6 +12,9 @@ export default function CtgForm() {
     const [githubUsername, setGithubUsername] = useState("")
 
     const [error, setError] = useState("")
+
+    const router = useRouter();
+    const setFormData = useFormStore((state) => state.setFormData);
 
     const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
         const newFile = event.target.files?.[0];
@@ -51,7 +56,6 @@ export default function CtgForm() {
         setGithubUsername(event.target.value)
     }
 
-    
     const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
         
@@ -60,20 +64,14 @@ export default function CtgForm() {
             return
         }
 
-        const formData = {
-            file: {file},
-            fullName: {fullName},
-            email: {email},
-            githubUsername: {githubUsername},
-            
-        }
+        setFormData({ file, fullName, email, githubUsername });
 
-
+        router.push('/ticket');
     }
 
 
     return (
-        <form id="form" className="flex flex-col gap-6 max-w-md w-md">
+        <form onSubmit={handleSubmit} id="form" className="flex flex-col gap-6 max-w-md w-md">
 
             {/* Upload Avatar */}
             <FormUpload label="Upload Form" id="uploadForm" onChange={handleFileUpload} />

@@ -1,6 +1,6 @@
 'use client'
-import CtgLogo from '@/app/ui/ctgLogo'
-import CtgForm from './ui/ctgForm';
+import CtgLogo from '@/app/ui/CTGLogo'
+import CtgForm from './ui/CTGForm';
 
 export default function Page() {
   return (

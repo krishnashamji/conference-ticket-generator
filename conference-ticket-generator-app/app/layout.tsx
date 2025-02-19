@@ -1,7 +1,7 @@
 
 import '@/app/ui/globals.css' // global styles import
 import { inconsolata } from '@/app/ui/font';
-import Background from "@/app/ui/background";
+import Background from "@/app/ui/Background";
 
 export default function RootLayout({
   children,
