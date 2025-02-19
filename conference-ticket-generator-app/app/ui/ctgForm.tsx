@@ -1,6 +1,6 @@
-import FormField from "@/app/ui/FormField.tsx";
-import FormUpload from "./FormUpload.tsx";
-import PrimaryButton from "./PrimaryButton.jsx";
+import FormField from "@/app/ui/FormField";
+import FormUpload from "./FormUpload";
+import PrimaryButton from "./PrimaryButton";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useFormStore } from "../hooks/formStore";
