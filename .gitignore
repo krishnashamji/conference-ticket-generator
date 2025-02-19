@@ -5,6 +5,7 @@
 
 # Dependencies
 /node_modules
+/brief
 /.pnp
 .pnp.js
 yarn.debug.log*
