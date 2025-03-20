@@ -45,11 +45,13 @@ export default function CtgForm() {
         const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         const emailValidity = emailPattern.test(newEmail);
 
-        if (newEmail === "" || emailValidity) {
+        if (emailValidity) {
             setError("")
         } else {
             setError("Please enter a valid email address")
         }
+
+        
     }
 
     const handleGithubUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
