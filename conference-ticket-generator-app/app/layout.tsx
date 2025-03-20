@@ -1,4 +1,3 @@
-
 import '@/app/ui/globals.css' // global styles import
 import { inconsolata } from '@/app/ui/font';
 import Background from "@/app/ui/Background";

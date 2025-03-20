@@ -50,8 +50,6 @@ export default function CtgForm() {
         } else {
             setError("Please enter a valid email address")
         }
-
-        
     }
 
     const handleGithubUsername = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -88,6 +86,7 @@ export default function CtgForm() {
             <FormField label="Github Username" id="githubUsername" type="text" value={githubUsername} onChange={handleGithubUsername} />
 
             <PrimaryButton label="Generate my ticket" type="submit" />
+            
         </form>
     )
 }
