@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function CtgLogo() {
+export default function CTGLogo() {
     return (
     <Image
         src="/icons/logo-full.svg"

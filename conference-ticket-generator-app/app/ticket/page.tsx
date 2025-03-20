@@ -1,5 +1,5 @@
 'use client'
-import CtgLogo from '@/app/ui/CTGLogo'
+import CTGLogo from '@/app/ui/CTGLogo'
 import imageAvatar from "@/public/images/image-avatar.jpg"
 import { useFormStore } from "@/app/hooks/formStore";
 
@@ -9,7 +9,7 @@ export default function Page() {
 
   return (
     <div className="flex flex-col items-center gap-12 max-w-4xl mx-auto mt-10 mb-32 text-center">
-      <CtgLogo />
+      <CTGLogo />
       <div className="flex-col items-center gap-6">
         <h1 className='leading-[1.25]'>Congrats, <span>{fullName}</span> Your ticket is ready.</h1>
         <p className="text-lg text-[#EAE6FD]">We’ve emailed your ticket to {email} and will send updates in the run up event.</p>
